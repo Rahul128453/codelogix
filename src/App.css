@@ -1,38 +1,373 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: "Montserrat", sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+  max-width: 1150px;
+  margin: auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header {
+  padding-top: 15px;
+  padding-bottom: 25px;
+}
+
+header .row {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header ul {
+  display: flex;
+  gap: 50px;
+}
+
+header ul li a {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.5px;
+  letter-spacing: 0.01em;
+  color: #265169;
+}
+
+.App {
+  background: #EAF7F7;
+  min-height: 820px;
+  position: relative;
+}
+
+header ul li {
+  list-style: none;
+}
+
+.contact-btn a {
+  border: 1px solid #265169;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24.38px;
+  letter-spacing: 0.01em;
+  text-align: left;
+  color: #265169;
+  text-decoration: none;
+  padding: 19px 40px;
+  border-radius: 50px;
+  transition: 0.5s;
+}
+
+.contact-btn a:hover {
+  background-color: #265169;
+  color: #fff;
+  transition: 0.5s;
+}
+
+.hero-banner-are h1 {
+  font-family: "Sofia Sans", sans-serif;
+  font-size: 96px;
+  font-weight: 500;
+  line-height: 115.2px;
+  letter-spacing: 0.01em;
+  text-align: left;
+  color: #265169;
+}
+
+.hero-banner-are h2 {
+  font-family: "Sofia Sans", sans-serif;
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 76.8px;
+  letter-spacing: 0.01em;
+  text-align: left;
+  color: #265169;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.hero-banner-are span {
+  color: #fff;
+  position: relative;
+  z-index: 11;
+}
+
+.hero-banner-are span::after {
+  content: '';
+  background-color: #33B1E0;
+  border-radius: 50%;
+  height: 107px;
+  width: 106px;
+  display: inline-block;
+  position: absolute;
+  right: -6px;
+  top: 8px;
+  z-index: -1;
+}
+
+section.hero-banner-are {
+  padding-top: 50px;
+}
+
+.hero-banner-are .get-btn a {
+  background-color: #265169;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 29.26px;
+  letter-spacing: 0.01em;
+  text-align: left;
+  color: #fff;
+  text-decoration: none;
+  padding: 20px 40px;
+  border-radius: 50px;
+}
+
+.get-started {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 100px;
+  padding-bottom: 30px;
+}
+
+.hero-banner-are h5 {
+  font-family: "Sofia Sans", sans-serif;
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 76.8px;
+  letter-spacing: 0.01em;
+  color: #265169;
+}
+
+.hero-banner-are .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero-banner-are .banner-right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
+}
+
+.banner-btm-left img {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.banner-btm-left img:last-child {
+  left: 200px;
+  bottom: -50px;
+}
+
+.banner-btm-left {
+  background: #EAF7F7;
+  min-height: 200px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.banner-right-bottom ul {
+  display: flex;
+  align-items: flex-start;
+}
+
+.banner-right-bottom ul li {
+  list-style: none;
+}
+
+.banner-right-bottom {
+  margin-top: 65px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.banner-right-bottom ul li:first-child {
+  margin-right: -25px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.banner-right-bottom ul li:last-child {
+  margin-left: -25px;
+}
+
+.excellent-reviews a {
+  background-color: #265169;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 29.26px;
+  letter-spacing: 0.01em;
+  text-align: left;
+  color: #fff;
+  text-decoration: none;
+  padding: 15px 33px;
+  border-radius: 50px;
+  margin-left: -10px;
+}
+
+.banner-btm-right {
+  background-color: #265169;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-btm-right img {
+  padding: 22px 20px;
+  border-right: 1px dashed #FFFFFF4D;
+  height: 61px;
+  object-fit: contain;
+}
+
+/* Reaponsive */
+
+@media only screen and (max-width: 1192px) {
+  .container {
+    max-width: 900px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .contact-btn a {
+    font-size: 15px;
+    padding: 10px 30px;
   }
+
+  header ul {
+    display: flex;
+    gap: 28px;
+  }
+
+  header ul li a {
+    font-size: 15px;
+  }
+
+  .logo-main {
+    width: 100px;
+    object-fit: cover;
+  }
+
+  .hero-banner-are h1 {
+    font-size: 62px;
+  }
+
+  .hero-banner-are span::after {
+    height: 72px;
+    width: 72px;
+    right: -7px;
+    top: 3px;
+  }
+
+  .hero-banner-are h2 {
+    font-size: 48px;
+  }
+
+  .hero-banner-are .get-btn a {
+    font-size: 15px;
+    padding: 10px 20px;
+  }
+
+  .hero-banner-are h5 {
+    font-size: 32px;
+  }
+
+  .excellent-reviews a {
+    font-size: 13px;
+    padding: 13px 25px;
+  }
+
+  .banner-btm-left img {
+    width: 330px;
+    object-fit: cover;
+  }
+
+  .banner-btm-left img:last-child {
+    left: 60px;
+    bottom: -50px;
+  }
+
+  .banner-btm-right img {
+    height: 54px;
+  }
+
+  .App {
+    min-height: 690px;
+  }
+
+
+}
+
+
+@media only screen and (max-width: 992px) {
+  .container {
+    max-width: 722px;
+  }
+
+  .App {
+    min-height: 650px;
+  }
+
+  .banner-btm-left img {
+    width: 250px;
+    object-fit: cover;
+  }
+
+  .banner-btm-right img {
+    height: 49px;
+    padding: 20px 10px;
+  }
+
+  .hero-banner-are h2 {
+    font-size: 36px;
+  }
+
+  .hero-banner-are h5 {
+    font-size: 25px;
+  }
+
+
+
+}
+
+@media only screen and (max-width: 767px) {
+  .hero-banner-are .row {
+    flex-direction: column;
+  }
+
+  header ul {
+    gap: 10px;
+  }
+
+  header .row {
+    flex-direction: column;
+    gap: 21px;
+  }
+
+  section.hero-banner-are {
+    padding-top: 10px;
+  }
+
+  .banner-btm-left {
+    position: relative;
+  }
+
+  .banner-btm-right {
+    position: relative;
+    margin-top: 70px;
+  }
+
+  .banner-btm-right img {
+    height: 41px;
+    padding: 17px 8px;
+  }
+
+
 }
